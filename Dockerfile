@@ -49,3 +49,5 @@ RUN echo "alias m='make'\n\
   alias sw='bundle exec rake rswag:specs:swaggerize'\n\
   export EDITOR=vi\n\
   export PATH=\$PATH:/bundle_cache/bin:/app/bin" >> ~/.bashrc
+
+RUN gem update --system 3.2.3 > /dev/null && gem install bundler -v 2.4.22 --silent
